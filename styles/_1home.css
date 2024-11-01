@@ -1,0 +1,101 @@
+.home{
+    background: url(../assets/guitar_girl.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    
+    & .ghost{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper{
+        flex-direction: column;
+        align-items: start;
+        gap: 8px;
+        z-index: 5;
+    }
+    h1{
+        font-size: var(--lg-font);
+        color:white;
+        & span{
+            color: var(--30-color);
+        }
+    }
+    h2{
+        font-size: var(--md-font);
+        color: var(--30-color);
+
+        span{
+            color: white;
+        }
+    }
+    .btn-wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-block: 10px;
+
+        & button{
+            border: 2px solid white;
+            font-size: var(--btn-font);
+            font-weight: bold;
+            color: var(--10-color);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            & svg{
+                padding-top: 3px;
+                height: 25px;
+                width: 25px;
+                transition: .2s ease;
+            }
+        }
+        button:hover{
+            border: 2px solid white;
+            color: white;
+            border-radius: .5cm;
+            padding: 5px 30px;
+            background: none;
+            backdrop-filter: blur(5px);
+        }
+        button:hover svg{
+            color: white;
+            transform: translateX(3px);
+        }
+        button:active{
+            scale: .95;
+        }
+    }
+}
+/* Basic setup */
+.background-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+  }
+  
+  /* Styling each slide */
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Fade effect */
+  }
+  
+  /* Make the first slide visible initially */
+  .slide:nth-child(1) {
+    opacity: 1;
+  }
+  
